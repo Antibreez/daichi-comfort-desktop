@@ -1,0 +1,131 @@
+.input-block {
+  &__wrapper {
+    position: relative;
+  }
+
+  &__label {
+    @include b12;
+    position: absolute;
+    top: 11px;
+    left: 0;
+    width: 100%;
+    padding: 0 16px;
+    color: $grey400;
+    pointer-events: none;
+    transition: color 0.2s,
+                font-size 0.2s,
+                line-height 0.2s,
+                top 0.2s;
+
+  }
+
+  &__input {
+    @include b16;
+    height: 64px;
+    width: 100%;
+    padding: 29px 16px 11px;
+    color: $text-main;
+    border: none;
+    background-color: $grey200;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:not(:disabled):hover {
+      background-color: $grey250;
+    }
+  }
+
+  &__note {
+    @include b12;
+    color: $grey400;
+    margin: 8px 0 0;
+    padding: 0 16px;
+    display: none;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    display: block;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      color: $grey400;
+    }
+  }
+
+  &__icon-hide {
+    display: none;
+  }
+
+  &__icon-btn {
+    @include font(0, 0);
+    @include btn-reset;
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    display: block;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .input-block__icon {
+      position: static;
+    }
+  }
+}
+
+.input-block.show-note {
+  .input-block__note {
+    display: block;
+  }
+}
+
+.input-block.js-empty {
+  .input-block__label {
+    @include b16;
+    color: $text-main;
+    top: 20px;
+  }
+}
+
+.input-block__input:disabled {
+  color: $grey300;
+
+  & ~ .input-block__label,
+  & ~ .input-block__note {
+    color: $grey300;
+  }
+
+  & ~ .input-block__icon {
+    svg {
+      color: $grey300;
+    }
+  }
+
+  & ~ .input-block__icon-btn {
+    pointer-events: none;
+
+    &:hover {
+      cursor: default;
+    }
+
+    svg {
+      color: $grey300;
+    }
+  }
+}
+
+.input-block.js-error {
+  .input-block__label,
+  .input-block__note {
+    color: $fail;
+  }
+}

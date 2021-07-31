@@ -1,0 +1,17 @@
+.footer {
+  @include b12;
+  display: flex;
+  padding: 24px 0;
+  justify-content: space-between;
+  color: #fff;
+
+  &__rools-link {
+    color: inherit;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+
+    &:hover {
+      border-color: #fff;
+    }
+  }
+}

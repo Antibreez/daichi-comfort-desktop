@@ -1,0 +1,21 @@
+// Vendor
+@import "../../node_modules/normalize.css/normalize";
+@import "../../node_modules/swiper/swiper-bundle";
+@import "../../node_modules/jquery-ui/themes/base/theme";
+@import "../../node_modules/jquery-ui/themes/base/datepicker";
+
+// Global
+@import "global/variables.scss";
+@import "global/mixins.scss";
+@import "global/fonts.scss";
+@import "global/global.scss";
+
+
+// Blocks
+@import "blocks/button.scss";
+@import "blocks/input-block.scss";
+@import "blocks/header.scss";
+@import "blocks/footer.scss";
+@import "blocks/authorization-page.scss";
+@import "blocks/authorization.scss";
+

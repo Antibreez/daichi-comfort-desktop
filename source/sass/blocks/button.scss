@@ -1,0 +1,36 @@
+.button-main,
+.button-secondary {
+  @include btn-reset;
+  @include h16;
+  padding: 16px;
+  color: #fff;
+  text-align: center;
+  background-color: $primary;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    cursor: pointer;
+    background-color: $add;
+  }
+
+  &:disabled {
+    background-color: $grey300;
+  }
+}
+
+.button-secondary {
+  color: $text-main;
+  background-color: $grey200;
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    background-color: $grey250;
+  }
+
+  &:disabled {
+    color: $grey300;
+    background-color: $grey200;
+  }
+}

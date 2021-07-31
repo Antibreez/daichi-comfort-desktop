@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Компоненты</title>
+  </head>
+  <body class="page__body  wrapper">
+    <h2>Поле ввода</h2>
+    <div class="input-block  show-note">
+      <div class="input-block__wrapper">
+        <input id="input" type="text" class="input-block__input">
+        <label for="input" class="input-block__label">
+          Наименование поля
+        </label>
+        <p class="input-block__note">
+          Подсказка описание для поля ввода
+        </p>
+      </div>
+    </div>
+    <br>
+    <div class="input-block  show-note">
+      <div class="input-block__wrapper">
+        <input id="input-2" type="text" value="Введённая информация" class="input-block__input">
+        <label for="input-2" class="input-block__label">
+          Наименование поля
+        </label>
+        <p class="input-block__note">
+          Подсказка описание для поля ввода
+        </p>
+      </div>
+    </div>
+    <br>
+    <div class="input-block  show-note">
+      <div class="input-block__wrapper">
+        <input id="input-3" type="text" class="input-block__input" value="Введённая информация" disabled>
+        <label for="input-3" class="input-block__label">
+          Наименование поля
+        </label>
+        <p class="input-block__note">
+          Подсказка описание для поля ввода
+        </p>
+      </div>
+    </div>
+    <br>
+    <div class="input-block  show-note">
+      <div class="input-block__wrapper">
+        <input id="input-4" type="text" class="input-block__input" disabled>
+        <label for="input-4" class="input-block__label">
+          Наименование поля
+        </label>
+        <p class="input-block__note">
+          Подсказка описание для поля ввода
+        </p>
+      </div>
+    </div>
+    <br>
+    <div class="input-block  js-error">
+      <div class="input-block__wrapper">
+        <input id="input-5" type="text" value="Введённая информация" class="input-block__input">
+        <label for="input-5" class="input-block__label">
+          Наименование поля
+        </label>
+        <p class="input-block__note">
+          Текст ошибки
+        </p>
+      </div>
+    </div>
+    <br>
+    <h3>Поле ввода с кнопкой-иконкой</h3>
+    <div class="input-block  show-note">
+      <div class="input-block__wrapper">
+        <input id="input-6" type="password" class="input-block__input" value="password">
+        <label for="input-6" class="input-block__label">
+          Наименование поля
+        </label>
+        <p class="input-block__note">
+          Подсказка описание для поля ввода
+        </p>
+
+        <button class="input-block__icon-btn  input-block__icon-btn--password">
+          <span class="input-block__icon">
+            <svg class="input-block__icon-show">
+              <use xlink:href="img/sprite.svg#eye-shown"></use>
+            </svg>
+            <svg class="input-block__icon-hide">
+              <use xlink:href="img/sprite.svg#eye-hidden"></use>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+    <br>
+    <div class="input-block  show-note">
+      <div class="input-block__wrapper">
+        <input id="input-7" type="password" class="input-block__input" value="password" disabled>
+        <label for="input-7" class="input-block__label">
+          Наименование поля
+        </label>
+        <p class="input-block__note">
+          Подсказка описание для поля ввода
+        </p>
+
+        <button class="input-block__icon-btn    input-block__icon-btn--password">
+          <span class="input-block__icon">
+            <svg>
+              <use xlink:href="img/sprite.svg#eye-shown"></use>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+    <br>
+    <h3>Поле ввода с иконкой</h3>
+    <div class="input-block  show-note">
+      <div class="input-block__wrapper">
+        <input id="input-8" type="text" class="input-block__input">
+        <label for="input-8" class="input-block__label">
+          Наименование поля
+        </label>
+        <p class="input-block__note">
+          Подсказка описание для поля ввода
+        </p>
+
+        <span class="input-block__icon">
+          <svg>
+            <use xlink:href="img/sprite.svg#search"></use>
+          </svg>
+        </span>
+      </div>
+    </div>
+
+
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
