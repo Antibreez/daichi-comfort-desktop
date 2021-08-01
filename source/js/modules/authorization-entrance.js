@@ -1,5 +1,6 @@
 const $input = $('.authorization-entrance  .input-block__input');
 const $btn = $('.authorization-entrance  .authorization__btn');
+const $form = $('.authorization-entrance  form');
 
 function isMatch($input) {
   return  $input.val().match(/^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/) !== null
@@ -11,11 +12,22 @@ function isFilled($input) {
 }
 
 $input.on('input', function() {
+  $input.parents('.input-block').removeClass('show-note  js-error')
 
-  if (isMatch($(this)) && isFilled($(this))) {
+  if (isFilled($(this))) {
     $btn.removeAttr('disabled');
   } else {
     $btn.attr('disabled', '');
   }
 
 });
+
+$btn.on('click', function(e) {
+  e.preventDefault();
+
+  if (isMatch($input)) {
+    $form.submit();
+  } else {
+    $input.parents('.input-block').addClass('show-note js-error');
+  }
+})

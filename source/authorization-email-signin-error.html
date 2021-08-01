@@ -18,22 +18,23 @@
       </header>
       <main class="authorization-page__main">
 
-        <div class="authorization-page__authorization  authorization  authorization-email-signup">
+        <div class="authorization-page__authorization  authorization  authorization-email-signin">
           <form>
             <h2 class="authorization__title">
-              Регистрация через Email
+              Вход через Email
             </h2>
             <p class="authorization__desc">
-              Введите пароль и подтверждение пароля для регистрации
+              Введите пароль вашей учётной записи
             </p>
 
 
-            <div class="authorization__input  input-block">
+            <div class="authorization__input  input-block  show-note js-error">
               <div class="input-block__wrapper">
-                <input id="password-1" type="password" name="password-1" class="input-block__input">
-                <label for="password-1" class="input-block__label">
+                <input id="password" type="password" class="input-block__input" value="password">
+                <label for="password" class="input-block__label">
                   Пароль
                 </label>
+                <p class="input-block__note">Введён неверный пароль</p>
 
                 <button type="button" class="input-block__icon-btn  input-block__icon-btn--password" tabindex="-1">
                   <span class="input-block__icon">
@@ -48,24 +49,9 @@
               </div>
             </div>
 
-            <div class="authorization__input  input-block">
-              <div class="input-block__wrapper">
-                <input id="password-2" type="password" name="password-2" class="input-block__input">
-                <label for="assword-2" class="input-block__label">
-                  Подтверждение пароля
-                </label>
-                <p class="input-block__note">
-                  Пароли не совпадают
-                </p>
-              </div>
-            </div>
+            <button class="authorization__btn  button-main" disabled>Войти</button>
 
-            <button class="authorization__btn  button-main" disabled>Зарегистрироваться</button>
-
-            <p class="authorization__policy">
-              Регистрируясь в приложении, Вы соглашаетесь с
-              <a href="#" class="authorization__policy-link">политикой конфиденциальности</a>
-            </p>
+            <a href="#" class="authorization__forgot-password">Забыли пароль?</a>
           </form>
 
           <a href="#" class="authorization__go-back" aria-label="Перейти назад"></a>

@@ -1,7 +1,7 @@
-const $input1 = $('.authorization-email-signup  #password-1');
-const $input2 = $('.authorization-email-signup  #password-2');
-const $btn = $('.authorization-email-signup  .authorization__btn');
-const $form = $('.authorization-email-signup  form');
+const $input1 = $('.authorization-email-restore-pass  #password-1');
+const $input2 = $('.authorization-email-restore-pass  #password-2');
+const $btn = $('.authorization-email-restore-pass  .authorization__btn');
+const $form = $('.authorization-email-restore-pass  form');
 
 function isFilled($input) {
   return $input.val() !== '' && $input.val().split(' ').join('') !== '';

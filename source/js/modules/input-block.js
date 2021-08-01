@@ -23,6 +23,10 @@ $input.on('blur', function() {
   }
 });
 
+window.addEventListener('popstate', function() {
+  console.log('change');
+});
+
 $('.input-block__icon-btn--password').on('click', function() {
   const $input = $(this).siblings('.input-block__input');
   const $show = $(this).find('.input-block__icon-show');

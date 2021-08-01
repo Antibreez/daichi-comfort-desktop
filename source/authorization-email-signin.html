@@ -18,30 +18,43 @@
       </header>
       <main class="authorization-page__main">
 
-        <div class="authorization-page__authorization  authorization  authorization-entrance">
+        <div class="authorization-page__authorization  authorization  authorization-email-signin">
           <form>
-            <img class="authorization__icon" src="img/app-icon.svg" alt="Daichi Comfort">
             <h2 class="authorization__title">
-              Войдите или зарегистрируйтесь
+              Вход через Email
             </h2>
             <p class="authorization__desc">
-              Укажите E-mail или номер телефона для входа в&nbsp;аккаунт или регистрации в&nbsp;приложении
+              Введите пароль вашей учётной записи
             </p>
+
 
             <div class="authorization__input  input-block">
               <div class="input-block__wrapper">
-                <input id="input" type="text" name="username" class="input-block__input">
-                <label for="input" class="input-block__label">
-                  Email или номер телефона
+                <input id="password" type="password" class="input-block__input">
+                <label for="password" class="input-block__label">
+                  Пароль
                 </label>
-                <p class="input-block__note">
-                  Некорректный формат адреса Email или номера телефона
-                </p>
+                <p class="input-block__note">Введён неверный пароль</p>
+
+                <button type="button" class="input-block__icon-btn  input-block__icon-btn--password" tabindex="-1">
+                  <span class="input-block__icon">
+                    <svg class="input-block__icon-show">
+                      <use xlink:href="img/sprite.svg#eye-shown"></use>
+                    </svg>
+                    <svg class="input-block__icon-hide">
+                      <use xlink:href="img/sprite.svg#eye-hidden"></use>
+                    </svg>
+                  </span>
+                </button>
               </div>
             </div>
 
-            <button type="submit" class="authorization__btn  button-main" disabled>Продолжить</button>
+            <button class="authorization__btn  button-main" disabled>Войти</button>
+
+            <a href="#" class="authorization__forgot-password">Забыли пароль?</a>
           </form>
+
+          <a href="#" class="authorization__go-back" aria-label="Перейти назад"></a>
         </div>
 
       </main>
@@ -50,6 +63,7 @@
         <a href="#" class="footer__rools-link">Правила и условия</a>
       </footer>
     </div>
+
 
     <script src="js/main.min.js"></script>
   </body>
