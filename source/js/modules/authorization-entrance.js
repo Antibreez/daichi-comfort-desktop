@@ -11,7 +11,6 @@ function isFilled($input) {
 }
 
 $input.on('input', function() {
-  console.log($(this).val());
 
   if (isMatch($(this)) && isFilled($(this))) {
     $btn.removeAttr('disabled');
