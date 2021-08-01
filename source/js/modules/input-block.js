@@ -1,10 +1,15 @@
 const $input = $('.input-block__input');
 
-$input.each(function() {
-  if ($(this).val() === '') {
-    $(this).parents('.input-block').addClass('js-empty');
-  }
-});
+$(window).on('load', function() {
+  $input.each(function() {
+    if ($(this).val() !== '') {
+      $(this).parents('.input-block').removeClass('js-empty');
+    } else {
+      $(this).parents('.input-block').addClass('js-empty');
+    }
+  });
+})
+
 
 $input.on('focus', function() {
   const $block = $(this).parents('.input-block');
@@ -23,8 +28,14 @@ $input.on('blur', function() {
   }
 });
 
-window.addEventListener('popstate', function() {
-  console.log('change');
+window.addEventListener('pageshow', function() {
+  $input.each(function() {
+    if ($(this).val() !== '') {
+      $(this).parents('.input-block').removeClass('js-empty');
+    } else {
+      $(this).parents('.input-block').addClass('js-empty');
+    }
+  });
 });
 
 $('.input-block__icon-btn--password').on('click', function() {
