@@ -14,10 +14,15 @@ img {
   // display: flex;
 }
 
+html {
+  min-width: 800px;
+  min-height: 100vh;
+}
+
 body {
   display: flex;
   flex-direction: column;
-  min-width: 1440px;
+  min-width: 800px;
   min-height: 100vh;
 
   font-family: $font;

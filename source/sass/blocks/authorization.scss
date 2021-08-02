@@ -30,6 +30,10 @@
     margin: 0 0 36px;
   }
 
+  &__desc-phone {
+    display: block;
+  }
+
   &__btn {
     width: 100%;
   }
@@ -76,5 +80,31 @@
     &:focus {
       color: $add;
     }
+  }
+
+  &__repeat-code-block {
+    margin-top: 24px;
+  }
+
+  &__repeat-code-btn {
+    @include btn-reset;
+    padding: 0;
+    @include h16;
+    color: $primary;
+    transition: color 0.2s;
+
+    &:not(:disabled):hover {
+      color: $add;
+      cursor: pointer;
+    }
+
+    &:disabled {
+      color: $grey300;
+    }
+  }
+
+  &__repeat-code-timer {
+    @include b16;
+    color: $grey400;
   }
 }

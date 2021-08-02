@@ -2253,10 +2253,15 @@ img {
   height: auto;
 }
 
+html {
+  min-width: 800px;
+  min-height: 100vh;
+}
+
 body {
   display: flex;
   flex-direction: column;
-  min-width: 1440px;
+  min-width: 800px;
   min-height: 100vh;
   font-family: "Suisse Intl", "Arial", "Helvetica", "Helvetica CY", "Nimbus Sans";
 }
@@ -2509,6 +2514,7 @@ button:active, button:focus {
 
 .authorization-page {
   display: flex;
+  height: 100%;
   flex-direction: column;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url("../img/bedroom.jpg") center/cover no-repeat;
 }
@@ -2560,6 +2566,9 @@ button:active, button:focus {
   color: #94A0B1;
   margin: 0 0 36px;
 }
+.authorization__desc-phone {
+  display: block;
+}
 .authorization__btn {
   width: 100%;
 }
@@ -2602,4 +2611,36 @@ button:active, button:focus {
 }
 .authorization__forgot-password:hover, .authorization__forgot-password:focus {
   color: #AAD2FF;
+}
+.authorization__repeat-code-block {
+  margin-top: 24px;
+}
+.authorization__repeat-code-btn {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+  color: #5EA9FF;
+  transition: color 0.2s;
+}
+.authorization__repeat-code-btn:hover, .authorization__repeat-code-btn:active, .authorization__repeat-code-btn:focus {
+  background-color: transparent;
+}
+.authorization__repeat-code-btn:not(:disabled):hover {
+  color: #AAD2FF;
+  cursor: pointer;
+}
+.authorization__repeat-code-btn:disabled {
+  color: #D1D8E1;
+}
+.authorization__repeat-code-timer {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #94A0B1;
 }
