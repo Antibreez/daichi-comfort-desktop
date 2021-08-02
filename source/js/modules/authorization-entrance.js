@@ -1,6 +1,6 @@
-const $input = $('.authorization-entrance  .input-block__input');
-const $btn = $('.authorization-entrance  .authorization__btn');
-const $form = $('.authorization-entrance  form');
+const $input = $('#login-input');
+const $btn = $input.parents('.input-block').siblings('.authorization__btn');
+const $form = $input.parents('form');
 
 function isMatch($input) {
   return  $input.val().match(/^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/) !== null

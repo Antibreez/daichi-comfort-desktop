@@ -1,5 +1,5 @@
-const $input = $('.authorization-email-signin  #password');
-const $btn = $('.authorization-email-signin  .authorization__btn');
+const $input = $('#password');
+const $btn =  $input.parents('.input-block').siblings('.authorization__btn');
 
 function isFilled($input) {
   return $input.val() !== '' && $input.val().split(' ').join('') !== '';
