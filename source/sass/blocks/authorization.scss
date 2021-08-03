@@ -15,6 +15,13 @@
 
   &__input {
     text-align: left;
+
+    &:not(:last-child) {
+      margin: 0 0 16px;
+    }
+  }
+
+  &__input-wrapper {
     margin: 0 0 36px;
   }
 

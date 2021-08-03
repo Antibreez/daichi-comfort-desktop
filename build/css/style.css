@@ -2550,6 +2550,11 @@ button:active, button:focus {
 }
 .authorization__input {
   text-align: left;
+}
+.authorization__input:not(:last-child) {
+  margin: 0 0 16px;
+}
+.authorization__input-wrapper {
   margin: 0 0 36px;
 }
 .authorization__title {
